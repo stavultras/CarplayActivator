@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
+        android:installLocation="internalOnly"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -12,8 +13,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CarplayActivator"
-        tools:targetApi="28">
+        android:theme="@style/Theme.CarplayActivator">
 
         <activity android:name=".MainActivity"
             android:exported="true" android:theme="@android:style/Theme.Translucent.NoTitleBar">
