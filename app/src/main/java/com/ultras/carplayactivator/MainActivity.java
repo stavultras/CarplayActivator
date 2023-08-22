@@ -42,7 +42,7 @@ public class MainActivity extends Activity
 
                 mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                     public void onCompletion(MediaPlayer mp) {
-                        mp.stop();
+                        mp.reset();
                         mp.release();
 
                         Log.i("Carplay Activator", "player stop");
@@ -64,6 +64,7 @@ public class MainActivity extends Activity
                                 public void run() {
                                     try {
                                         mRecorder.stop();
+                                        mRecorder.reset();
                                         mRecorder.release();
                                         mRecorder = null;
 
