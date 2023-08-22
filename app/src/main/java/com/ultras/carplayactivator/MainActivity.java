@@ -31,14 +31,14 @@ public class MainActivity extends Activity
         if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) {
             AssetFileDescriptor afd = null;
             try {
-                afd = getAssets().openFd("silence-750ms.mp3");
+                afd = getAssets().openFd("test.mp3");
+
+                Log.i("Carplay Activator", "player start");
 
                 mp = new MediaPlayer();
                 mp.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
                 mp.prepare();
                 mp.start();
-
-                Log.i("Carplay Activator", "player start");
 
                 mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                     public void onCompletion(MediaPlayer mp) {
