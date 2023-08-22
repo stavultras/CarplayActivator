@@ -79,7 +79,7 @@ public class MainActivity extends Activity
                         } catch (Exception e) {
 
                         }
-                    };
+                    }
                 });
             } catch (IOException e) {
                 throw new RuntimeException(e);
