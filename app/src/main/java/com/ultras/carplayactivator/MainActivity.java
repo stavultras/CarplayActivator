@@ -31,7 +31,7 @@ public class MainActivity extends Activity
         if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) {
             AssetFileDescriptor afd = null;
             try {
-                afd = getAssets().openFd("test.mp3");
+                afd = getAssets().openFd("silence-500ms.mp3");
 
                 Log.i("Carplay Activator", "player start");
 
